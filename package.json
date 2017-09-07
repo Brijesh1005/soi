@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start",
-    "server": "node server/main.js",
+    "server": "node node_modules/react-native/local-cli/cli.js start",
+    "start": "node server/main.js",
     "start:dev": "forever -w server/main.js",
     "forever:startdev": "forever start -w server/main.js",
     "forever:stopAll": "forever stopall",
@@ -12,6 +12,7 @@
     "forever:list": "forever list",
     "test": "jest"
   },
+  "main": "server/main.js",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",

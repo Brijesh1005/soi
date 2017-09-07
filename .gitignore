@@ -2,6 +2,7 @@ node_modules/
 .idea/
 .DS_Store
 .orig
+npm-debug*
 
 # User-specific stuff:
 .idea/workspace.xml
