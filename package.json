@@ -13,35 +13,17 @@
     "test": "jest"
   },
   "main": "server/main.js",
+  "description": "Sphere of influence",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
     "forever": "^0.15.3",
     "isomorphic-fetch": "^2.2.1",
     "js": "^0.1.0",
-    "mongoose": "^4.7.6",
-    "react": "~15.4.1",
-    "react-native": "^0.41.0",
-    "react-native-elements": "^0.11.2",
-    "react-native-modal": "^2.4.0",
-    "react-native-simple-toast": "0.0.5",
-    "react-native-star-rating": "^1.0.6",
-    "react-native-swipe-list-view": "^0.4.1",
-    "react-native-vector-icons": "~4.0.0",
-    "react-redux": "^3.1.0",
-    "redux": "^3.0.3",
-    "redux-logger": "^2.0.4",
-    "redux-thunk": "^1.0.0",
-    "reselect": "^2.5.4",
-    "toastr": "^2.1.2"
+    "mongoose": "^4.7.6"
   },
-  "devDependencies": {
-    "babel-jest": "17.0.2",
-    "babel-preset-react-native": "1.9.0",
-    "jest": "17.0.3",
-    "react-test-renderer": "15.4.1"
-  },
-  "jest": {
-    "preset": "react-native"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Brijesh1005/soi.git"
   }
 }
