@@ -1,7 +1,15 @@
 var mongoose = require('mongoose');
-var dbURI = 'mongodb://localhost/soi';
+var db_name = 'soi';
+//provide a sensible default for local development
+var mongodb_connection_string = 'mongodb://127.0.0.1:27017/' + db_name;
+//take advantage of openshift env vars when available:
+if(process.env.OPENSHIFT_MONGODB_DB_URL){
+  mongodb_connection_string = process.env.OPENSHIFT_MONGODB_DB_URL + db_name;
+}
 
-mongoose.connect('mongodb://localhost/soi', function () {
+mongoose.connect(mongodb_connection_string, {
+  useMongoClient: true
+}).then(function () {
   console.log("Connected to the awesome SOI db");
 });
 require('./models/Login.js')
@@ -12,7 +20,7 @@ require('./models/Connections.js');
 require('./models/ConnectionDetails.js');
 
 mongoose.connection.on('connected', function () {
-  console.log('Mongoose connected to ' + dbURI);
+  console.log('Mongoose connected to ' + mongodb_connection_string);
 });
 
 mongoose.connection.on('error', function (err) {
