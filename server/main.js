@@ -9,8 +9,8 @@ var express = require('express'),
   login = require('./routes/login');
 
 var app = new express();
-var PORT = process.env.OPENSHIFT_NODEJS_PORT || 8098;
-var server_ip_address = process.env.OPENSHIFT_NODEJS_IP || '127.0.0.1'
+var PORT = process.env.HEROKU_NODEJS_PORT || 8098;
+var server_ip_address = process.env.HEROKU_NODEJS_IP || '127.0.0.1'
 
 app.get('/', function (req, res) {
   res.send('hello world');
