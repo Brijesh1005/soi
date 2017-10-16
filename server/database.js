@@ -10,7 +10,7 @@ if(process.env.MONGODB_URI){
 mongoose.connect(mongodb_connection_string, {
   useMongoClient: true
 }).then(function () {
-  console.log("Connected to the awesome SOI db");
+  console.log("Connected to the awesome SOI db at: ", mongodb_connection_string);
 });
 require('./models/Login.js')
 require('./models/Profile.js');
