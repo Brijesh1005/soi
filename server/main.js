@@ -9,10 +9,13 @@ var express = require('express'),
   login = require('./routes/login');
 
 var app = new express();
+var PORT = process.env.PORT || 8098;
 
 app.get('/', function (req, res) {
   res.send('hello world');
-})
+}).listen(PORT);
+
+console.log('application started at: ' + PORT);
 
 app.use(parser.json());
 app.use('/profile',  profiles);
